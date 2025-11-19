@@ -2,11 +2,12 @@
 
 void Display()
 {
-    printf("1\t");
-    printf("2\t");
-    printf("3\t");
-    printf("4\t");
-    printf("5\t");
+    int iCnt = 0;
+
+   for(iCnt = 5; iCnt >= 1; iCnt--)
+   {
+      printf("%d\t",iCnt);
+   }
 
     printf("\n");
 }
