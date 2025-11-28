@@ -1,17 +1,32 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+typedef int * IPTR;
+
+int Minimum(int Arr[], int iSize)
+{
+   int iCnt = 0, iMin = 0;    
+
+   for(iMin = Arr[iCnt], iCnt = 0; iCnt < iSize; iCnt++)
+   {
+      if(Arr[iCnt] < iMin)
+      {
+         iMin = Arr[iCnt];
+      }
+   }
+   return iMin;
+}
 
 int main()
 {
-    int ilength = 0, iCnt = 0;
-    int *iPtr = NULL;
+    int ilength = 0, iCnt = 0, iRet = 0;
+    IPTR iPtr = NULL;
 
     printf("Enter the number of elements : \n");
     scanf("%d",&ilength);
 
     // Step 1 : To allocate the memory
-    iPtr = (int *)malloc(ilength * sizeof(int));
+    iPtr = (IPTR)malloc(ilength * sizeof(int));
 
     if(NULL == iPtr)
     {
@@ -26,9 +41,11 @@ int main()
         scanf("%d",&iPtr[iCnt]);
     }
 
+
     //Step 2: Use the memmory
-    // Call the function which contains business logic
-    // Fun(iPtr, ilength);
+    iRet = Minimum(iPtr,ilength);
+   
+    printf("Minimum number is : %d\n",iRet);
 
     // Step 3 : Free the memmory
 
