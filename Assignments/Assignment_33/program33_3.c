@@ -12,9 +12,9 @@ typedef int bool;
 
 ///////////////////////////////////////////////////////////////
 //
-// Function Name :  ChkAlpha
+// Function Name :  ChkDigit
 // Description   :  This function checks whether the entered
-//                  character is an alphabet (A–Z or a–z).
+//                  character is a digit (0–9).
 // Input         :  Character
 // Output        :  TRUE / FALSE
 // Author        :  Saurabh Santosh Kanade
@@ -22,9 +22,9 @@ typedef int bool;
 //
 ///////////////////////////////////////////////////////////////
 
-bool ChkAlpha(char ch)
+bool ChkDigit(char ch)
 {
-    if((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))
+    if(ch >= '0' && ch <= '9')
     {
         return TRUE;
     }
@@ -45,18 +45,18 @@ int main()
     char cValue = '\0';
     bool bRet = FALSE;
 
-    printf("Enter the character:\n");
+    printf("Enter the character: \n");
     scanf("%c", &cValue);
 
-    bRet = ChkAlpha(cValue);
+    bRet = ChkDigit(cValue);
 
     if(bRet == TRUE)
     {
-        printf("It is Alphabet character");
+        printf("It is digit");
     }
     else
     {
-        printf("It is not Alphabet character");
+        printf("It is not digit");
     }
 
     return 0;
@@ -66,10 +66,10 @@ int main()
 //
 // Example:
 //
-// Input  : A
-// Output : It is Alphabet character
+// Input  :  5
+// Output :  It is digit
 //
-// Input  : 7
-// Output : It is not Alphabet character
+// Input  :  A
+// Output :  It is not digit
 //
 ///////////////////////////////////////////////////////////////

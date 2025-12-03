@@ -12,9 +12,9 @@ typedef int bool;
 
 ///////////////////////////////////////////////////////////////
 //
-// Function Name :  ChkAlpha
+// Function Name :  ChkSmall
 // Description   :  This function checks whether the entered
-//                  character is an alphabet (A–Z or a–z).
+//                  character is a small (lowercase) letter.
 // Input         :  Character
 // Output        :  TRUE / FALSE
 // Author        :  Saurabh Santosh Kanade
@@ -22,9 +22,9 @@ typedef int bool;
 //
 ///////////////////////////////////////////////////////////////
 
-bool ChkAlpha(char ch)
+bool ChkSmall(char ch)
 {
-    if((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))
+    if(ch >= 'a' && ch <= 'z')
     {
         return TRUE;
     }
@@ -45,18 +45,18 @@ int main()
     char cValue = '\0';
     bool bRet = FALSE;
 
-    printf("Enter the character:\n");
+    printf("Enter the character : \n");
     scanf("%c", &cValue);
 
-    bRet = ChkAlpha(cValue);
+    bRet = ChkSmall(cValue);
 
     if(bRet == TRUE)
     {
-        printf("It is Alphabet character");
+        printf("It is Small case Character");
     }
     else
     {
-        printf("It is not Alphabet character");
+        printf("It is not Small case Character");
     }
 
     return 0;
@@ -66,10 +66,10 @@ int main()
 //
 // Example:
 //
-// Input  : A
-// Output : It is Alphabet character
+// Input  :  g
+// Output :  It is Small case Character
 //
-// Input  : 7
-// Output : It is not Alphabet character
+// Input  :  G
+// Output :  It is not Small case Character
 //
 ///////////////////////////////////////////////////////////////
