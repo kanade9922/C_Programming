@@ -1,5 +1,8 @@
+#include<stdio.h>
+#include<fcntl.h>
 
-
+int main()
+{
     int fd = 0;
 
     fd = creat("PPA.txt",0777);
@@ -10,7 +13,7 @@
     }
     else
     {
-        printf("File successfully created\n");
+        printf("File successfully created with fd : %d\n",fd);
     }
 
     return 0;
