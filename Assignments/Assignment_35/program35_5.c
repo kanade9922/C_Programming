@@ -8,29 +8,33 @@
 
 ///////////////////////////////////////////////////////////////
 //
-// Function Name :  CountCapital
-// Description   :  Counts the number of capital letters (A–Z)
-//                  in the given string.
-// Input         :  Character Array (String)
-// Output        :  Integer count
+// Function Name :  Reverse
+// Description   :  Prints the given string in reverse order.
+// Input         :  Character array (string)
+// Output        :  Reversed string printed
 // Author        :  Saurabh Santosh Kanade
-// Date          :  01/12/2025
+// Date          :  06/12/2025
 //
 ///////////////////////////////////////////////////////////////
 
-int CountCapital(char *str)
+void Reverse(char *str)
 {
-    int iCnt = 0;
+    char *end = str;
 
-    while(*str != '\0')
+    // Move to the end of string
+    while(*end != '\0')
     {
-        if(*str >= 'A' && *str <= 'Z')
-        {
-            iCnt++;
-        }
-        str++;
+        end++;
     }
-    return iCnt;
+    end--; // Move back from null character
+
+    // Print in reverse
+    while(end >= str)
+    {
+        printf("%c", *end);
+        end--;
+    }
+    printf("\n");
 }
 
 ///////////////////////////////////////////////////////////////
@@ -42,14 +46,12 @@ int CountCapital(char *str)
 int main()
 {
     char arr[20];
-    int iRet = 0;
 
-    printf("Enter String : \n");
+    printf("Enter string : \n");
     scanf("%[^'\n']s", arr);
 
-    iRet = CountCapital(arr);
-
-    printf("%d", iRet);
+    printf("Reversed string : ");
+    Reverse(arr);
 
     return 0;
 }
@@ -58,7 +60,7 @@ int main()
 //
 // Example:
 //
-// Input  :  Marvellous Infosystem
-// Output :  2
+// Input  : Marvellous
+// Output : suollevraM
 //
 ///////////////////////////////////////////////////////////////

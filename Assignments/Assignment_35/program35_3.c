@@ -8,29 +8,35 @@
 
 ///////////////////////////////////////////////////////////////
 //
-// Function Name :  CountCapital
-// Description   :  Counts the number of capital letters (A–Z)
-//                  in the given string.
-// Input         :  Character Array (String)
-// Output        :  Integer count
+// Function Name :  Difference
+// Description   :  Calculates difference between number of
+//                  capital letters and small letters.
+//                  (Difference = CapitalCount – SmallCount)
+// Input         :  String
+// Output        :  Integer (difference)
 // Author        :  Saurabh Santosh Kanade
-// Date          :  01/12/2025
+// Date          :  02/12/2025
 //
 ///////////////////////////////////////////////////////////////
 
-int CountCapital(char *str)
+int Difference(char *str)
 {
-    int iCnt = 0;
+    int iCapital = 0;
+    int iSmall = 0;
 
     while(*str != '\0')
     {
-        if(*str >= 'A' && *str <= 'Z')
+        if(*str >= 'a' && *str <= 'z')
         {
-            iCnt++;
+            iSmall++;
+        }
+        else if(*str >= 'A' && *str <= 'Z')
+        {
+            iCapital++;
         }
         str++;
     }
-    return iCnt;
+    return iCapital - iSmall;
 }
 
 ///////////////////////////////////////////////////////////////
@@ -47,7 +53,7 @@ int main()
     printf("Enter String : \n");
     scanf("%[^'\n']s", arr);
 
-    iRet = CountCapital(arr);
+    iRet = Difference(arr);
 
     printf("%d", iRet);
 
@@ -58,7 +64,9 @@ int main()
 //
 // Example:
 //
-// Input  :  Marvellous Infosystem
-// Output :  2
+// Input  :  aAAbc
+// Capital = 3
+// Small   = 2
+// Output  :  1
 //
 ///////////////////////////////////////////////////////////////

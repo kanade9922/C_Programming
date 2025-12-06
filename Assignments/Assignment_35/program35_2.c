@@ -8,23 +8,23 @@
 
 ///////////////////////////////////////////////////////////////
 //
-// Function Name :  CountCapital
-// Description   :  Counts the number of capital letters (A–Z)
+// Function Name :  CountSmall
+// Description   :  Counts the number of small letters (a–z)
 //                  in the given string.
 // Input         :  Character Array (String)
 // Output        :  Integer count
 // Author        :  Saurabh Santosh Kanade
-// Date          :  01/12/2025
+// Date          :  02/12/2025
 //
 ///////////////////////////////////////////////////////////////
 
-int CountCapital(char *str)
+int CountSmall(char *str)
 {
     int iCnt = 0;
 
     while(*str != '\0')
     {
-        if(*str >= 'A' && *str <= 'Z')
+        if(*str >= 'a' && *str <= 'z')
         {
             iCnt++;
         }
@@ -44,10 +44,10 @@ int main()
     char arr[20];
     int iRet = 0;
 
-    printf("Enter String : \n");
+    printf("Enter string : \n");
     scanf("%[^'\n']s", arr);
 
-    iRet = CountCapital(arr);
+    iRet = CountSmall(arr);
 
     printf("%d", iRet);
 
@@ -59,6 +59,6 @@ int main()
 // Example:
 //
 // Input  :  Marvellous Infosystem
-// Output :  2
+// Output :  17
 //
 ///////////////////////////////////////////////////////////////
