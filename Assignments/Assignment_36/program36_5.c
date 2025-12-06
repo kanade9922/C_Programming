@@ -8,26 +8,30 @@
 
 ///////////////////////////////////////////////////////////////
 //
-// Function Name :  strlwrx
-// Description   :  Converts all uppercase letters in a string
-//                  to lowercase letters.
+// Function Name :  CountWhite
+// Description   :  Counts the number of whitespace characters
+//                  (spaces) in the given string.
 // Input         :  Character array (string)
-// Output        :  Modified string in-place
+// Output        :  Integer (count of spaces)
 // Author        :  Saurabh Santosh Kanade
 // Date          :  03/12/2025
 //
 ///////////////////////////////////////////////////////////////
 
-void strlwrx(char str[])
+int CountWhite(char *str)
 {
+    int iCount = 0;
+     
     while(*str != '\0')
     {
-        if(*str >= 'A' && *str <= 'Z')
+        if(*str == ' ')
         {
-            *str = *str + 32; // Convert uppercase to lowercase
+            iCount++;
         }
         str++;
     }
+
+    return iCount;
 }
 
 ///////////////////////////////////////////////////////////////
@@ -39,13 +43,14 @@ void strlwrx(char str[])
 int main()
 {
     char arr[20];
+    int iRet = 0;
 
     printf("Enter string : \n");
     scanf("%[^'\n']s", arr);
 
-    strlwrx(arr);
+    iRet = CountWhite(arr);
 
-    printf("Modified string is : %s\n", arr);
+    printf("Number of white spaces : %d\n", iRet);
 
     return 0;
 }
@@ -54,7 +59,7 @@ int main()
 //
 // Example:
 //
-// Input  : Marvellous
-// Output : marvellous
+// Input  : "Marvellous Infosystems Pune"
+// Output : 2
 //
 ///////////////////////////////////////////////////////////////

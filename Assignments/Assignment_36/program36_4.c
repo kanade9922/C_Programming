@@ -8,26 +8,27 @@
 
 ///////////////////////////////////////////////////////////////
 //
-// Function Name :  strlwrx
-// Description   :  Converts all uppercase letters in a string
-//                  to lowercase letters.
+// Function Name :  DisplayDigit
+// Description   :  Prints only the digits (0–9) present
+//                  in the given string.
 // Input         :  Character array (string)
-// Output        :  Modified string in-place
+// Output        :  Digits printed on the screen
 // Author        :  Saurabh Santosh Kanade
 // Date          :  03/12/2025
 //
 ///////////////////////////////////////////////////////////////
 
-void strlwrx(char str[])
+void DisplayDigit(char *str)
 {
     while(*str != '\0')
     {
-        if(*str >= 'A' && *str <= 'Z')
+        if(*str >= '0' && *str <= '9')
         {
-            *str = *str + 32; // Convert uppercase to lowercase
+            printf("%c", *str);
         }
         str++;
     }
+    printf("\n");
 }
 
 ///////////////////////////////////////////////////////////////
@@ -43,9 +44,8 @@ int main()
     printf("Enter string : \n");
     scanf("%[^'\n']s", arr);
 
-    strlwrx(arr);
-
-    printf("Modified string is : %s\n", arr);
+    printf("Digits in the string : ");
+    DisplayDigit(arr);
 
     return 0;
 }
@@ -54,7 +54,7 @@ int main()
 //
 // Example:
 //
-// Input  : Marvellous
-// Output : marvellous
+// Input  : marve89llous21
+// Output : 8921
 //
 ///////////////////////////////////////////////////////////////

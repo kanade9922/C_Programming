@@ -8,9 +8,9 @@
 
 ///////////////////////////////////////////////////////////////
 //
-// Function Name :  strlwrx
-// Description   :  Converts all uppercase letters in a string
-//                  to lowercase letters.
+// Function Name :  strtoggle
+// Description   :  Converts uppercase letters to lowercase
+//                  and lowercase letters to uppercase.
 // Input         :  Character array (string)
 // Output        :  Modified string in-place
 // Author        :  Saurabh Santosh Kanade
@@ -18,13 +18,17 @@
 //
 ///////////////////////////////////////////////////////////////
 
-void strlwrx(char str[])
+void strtoggle(char *str)
 {
     while(*str != '\0')
     {
         if(*str >= 'A' && *str <= 'Z')
         {
-            *str = *str + 32; // Convert uppercase to lowercase
+            *str = *str + 32;     // Uppercase → lowercase
+        }
+        else if(*str >= 'a' && *str <= 'z')
+        {
+            *str = *str - 32;     // Lowercase → uppercase
         }
         str++;
     }
@@ -43,9 +47,9 @@ int main()
     printf("Enter string : \n");
     scanf("%[^'\n']s", arr);
 
-    strlwrx(arr);
+    strtoggle(arr);      
 
-    printf("Modified string is : %s\n", arr);
+    printf("Modified string is : %s\n", arr); 
 
     return 0;
 }
@@ -55,6 +59,6 @@ int main()
 // Example:
 //
 // Input  : Marvellous
-// Output : marvellous
+// Output : mARVELLOUS
 //
 ///////////////////////////////////////////////////////////////

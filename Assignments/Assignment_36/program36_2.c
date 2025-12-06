@@ -8,9 +8,9 @@
 
 ///////////////////////////////////////////////////////////////
 //
-// Function Name :  strlwrx
-// Description   :  Converts all uppercase letters in a string
-//                  to lowercase letters.
+// Function Name :  struprx
+// Description   :  Converts all lowercase letters in a string
+//                  to uppercase letters.
 // Input         :  Character array (string)
 // Output        :  Modified string in-place
 // Author        :  Saurabh Santosh Kanade
@@ -18,13 +18,13 @@
 //
 ///////////////////////////////////////////////////////////////
 
-void strlwrx(char str[])
+void struprx(char *str)
 {
     while(*str != '\0')
     {
-        if(*str >= 'A' && *str <= 'Z')
+        if(*str >= 'a' && *str <= 'z')
         {
-            *str = *str + 32; // Convert uppercase to lowercase
+            *str = *str - 32; // Convert lowercase to uppercase
         }
         str++;
     }
@@ -40,12 +40,12 @@ int main()
 {
     char arr[20];
 
-    printf("Enter string : \n");
+    printf("Enter string: \n");
     scanf("%[^'\n']s", arr);
 
-    strlwrx(arr);
+    struprx(arr);
 
-    printf("Modified string is : %s\n", arr);
+    printf("Modified string is: %s\n", arr);
 
     return 0;
 }
@@ -54,7 +54,7 @@ int main()
 //
 // Example:
 //
-// Input  : Marvellous
-// Output : marvellous
+// Input  : marvellous
+// Output : MARVELLOUS
 //
 ///////////////////////////////////////////////////////////////
