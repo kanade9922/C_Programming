@@ -2,11 +2,12 @@
 
 void Display(int iNo)
 {
-    int iCnt = 0;
+    char ch = 'A';
 
-    for(iCnt = 1; iCnt <= iNo; iCnt++)
+    for(int i = 1; i <= iNo; i++)
     {
-        printf("*\t");
+        printf("%c\t", ch);
+        ch++;
     }
 }
 
