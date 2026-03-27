@@ -3,18 +3,7 @@
 
 bool CheckEvenOdd(int iNo)
 {
-    int iRem = 0;
-
-    iRem = iNo % 2;
-
-    if(iRem == 0)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+    return((iNo % 2) == 0);
 }
 
 int main()
