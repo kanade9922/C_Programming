@@ -12,7 +12,7 @@ This repository contains C programming practice programs created while learning 
 - Strings
 - Pattern Programs
 
-## 📂 Folder Structure
+## 📂 Folder Structure 
 Each folder contains different approaches and optimized solutions for programs.
 
 ## 🎯 Purpose
