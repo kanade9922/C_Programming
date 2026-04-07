@@ -14,7 +14,12 @@ void Display(int iNo)
 
 int main()
 {
-      Display(7);
+    int iValue = 0;
+
+    printf("Please enter frequency : \n");
+    scanf("%d",&iValue);
+
+    Display(iValue);
 
     return 0;
 }

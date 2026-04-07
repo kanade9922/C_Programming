@@ -1,20 +1,19 @@
 #include<stdio.h>
 
-void Display(int iNo)
+void Display()
 {
     int iCnt = 0;
 
-    for(iCnt = 1; iCnt <= iNo; iCnt++)
+    for(iCnt = 1; iCnt <= 5; iCnt++)
     {
-        printf("%d\t",iCnt);
+        printf("*\t",iCnt);
     }
-
     printf("\n");
 }
 
 int main()
 {
-      Display(7);
+    Display();
 
     return 0;
 }
