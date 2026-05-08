@@ -1,4 +1,4 @@
-// Accept N number from user as well as accept 1 Another number and check whether that number is present or not in ur Array or list
+// Accept N number from user find the largest number
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -6,34 +6,25 @@
 
 typedef  int * IPTR;
 
-// < O(N)
-bool LinearSearch(int Arr[], int iSize , int iNo)
+int Maximum(int Arr[], int iSize , int iNo)
 {
-    int iCnt = 0, iCount = 0;
+    int iCnt = 0, iMax = 0;
 
     for(iCnt = 0; iCnt < iSize; iCnt++)
     {
-        if(Arr[iCnt] == iNo)
+        if(Arr[iCnt] > iMax)
         {
-            iCount++;
-            break;
+            iMax = Arr[iCnt];
         }
     }
 
-    if(iCount > 0)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+    return iMax;
+
 }
 
 int main()
 {
-    int iLength = 0, iCnt = 0, iValue = 0;
-    bool bRet = false;
+    int iLength = 0, iCnt = 0, iRet = 0;
     IPTR iPtr = NULL;
 
     printf("Enter the number of elements : \n");

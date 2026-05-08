@@ -1,6 +1,7 @@
 // Static memory allocation
 
 #include<stdio.h>
+#include<stdlib.h>
 
 void Display(int Arr[],int iSize)
 {
@@ -15,14 +16,15 @@ void Display(int Arr[],int iSize)
 int main()
 {
     int ilength = 0, iCnt = 0;
-    int *ptr = null;
+    int *ptr = NULL;
 
-    printf("Enter numbers of elements : ");
+    printf("Enter number of elements : \n");
     scanf("%d",&ilength);
 
     ptr = (int *)malloc(ilength * sizeof(int));
 
     printf("Enter the elements : \n");
+
     for(iCnt = 0; iCnt < ilength; iCnt++)
     {
         scanf("%d",&ptr[iCnt]);
@@ -31,6 +33,6 @@ int main()
     Display(ptr,ilength);
 
     free(ptr);
-    
+
     return 0;
 }

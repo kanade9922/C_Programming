@@ -1,21 +1,20 @@
 #include<stdio.h>
 
-void Display(int *ptr)
+void Display(int Arr[])
 {
     int iCnt = 0;
 
     for(iCnt = 0; iCnt < 4; iCnt++)
     {
-        printf("%d\n",*ptr);
-        ptr++;
+        printf("%d\n", Arr[iCnt]);
     }
 }
 
 int main()
 {
-    int Arr[] = {10,20,30,40};
+    int Brr[] = {10,20,30,40,50,60,70};
     
-    Display(Arr);
+    Display(Brr);
 
     return 0;
 }   

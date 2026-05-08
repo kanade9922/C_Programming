@@ -9,25 +9,20 @@ typedef  int * IPTR;
 // < O(N)
 bool LinearSearch(int Arr[], int iSize , int iNo)
 {
-    int iCnt = 0, iCount = 0;
+    int iCnt = 0;
+    bool bFlag = false;
 
     for(iCnt = 0; iCnt < iSize; iCnt++)
     {
         if(Arr[iCnt] == iNo)
         {
-            iCount++;
+            bFlag = true;
             break;
         }
     }
 
-    if(iCount > 0)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+    return bFlag;
+   
 }
 
 int main()
