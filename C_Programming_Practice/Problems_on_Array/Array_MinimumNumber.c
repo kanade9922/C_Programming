@@ -1,23 +1,23 @@
-// Accept N number from user find the largest number
+// Accept N number from user find the Smallest number
 
 #include<stdio.h>
 #include<stdlib.h>
 
 typedef  int * IPTR;
 
-int Maximum(int Arr[], int iSize)
+int Mimimum(int Arr[], int iSize)
 {
-    int iCnt = 0, iMax = 0;     // Unable to handle negative input
+    int iCnt = 0, iMin = 0;     
 
-    for(iCnt = 0; iCnt < iSize; iCnt++)
+    for(iMin = Arr[iCnt], iCnt = 0; iCnt < iSize; iCnt++)
     {
-        if(Arr[iCnt] > iMax)
+        if(Arr[iCnt] > iMin)
         {
-            iMax = Arr[iCnt];
+            iMin = Arr[iCnt];
         }
     }
 
-    return iMax;
+    return iMin;
 }
 
 int main()
@@ -45,9 +45,9 @@ int main()
     }
 
     // Step 2 : Use the memory
-    iRet = Maximum(iPtr, iLength);
+    iRet = Mimimum(iPtr, iLength);
 
-    printf("Maximum number is : %d\n",iRet);
+    printf("Minimum number is : %d\n",iRet);
 
     // Step 3 : Free the memory
     free(iPtr);

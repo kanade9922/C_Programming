@@ -7,9 +7,9 @@ typedef  int * IPTR;
 
 int Maximum(int Arr[], int iSize)
 {
-    int iCnt = 0, iMax = 0;     // Unable to handle negative input
+    int iCnt = 0, iMax = 0;     
 
-    for(iCnt = 0; iCnt < iSize; iCnt++)
+    for(iMax = Arr[iCnt], iCnt = 0; iCnt < iSize; iCnt++)
     {
         if(Arr[iCnt] > iMax)
         {

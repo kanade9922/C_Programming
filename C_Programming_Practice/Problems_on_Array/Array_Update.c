@@ -1,23 +1,18 @@
-// Accept N number from user find the largest number
+// Accept N number from user Reverse the Array values
 
 #include<stdio.h>
 #include<stdlib.h>
 
 typedef  int * IPTR;
 
-int Maximum(int Arr[], int iSize)
+void Update(int Arr[], int iSize)
 {
-    int iCnt = 0, iMax = 0;     // Unable to handle negative input
+    int iCnt = 0;
 
     for(iCnt = 0; iCnt < iSize; iCnt++)
     {
-        if(Arr[iCnt] > iMax)
-        {
-            iMax = Arr[iCnt];
-        }
+        Arr[iCnt]++;
     }
-
-    return iMax;
 }
 
 int main()
@@ -45,10 +40,14 @@ int main()
     }
 
     // Step 2 : Use the memory
-    iRet = Maximum(iPtr, iLength);
+    Update(iPtr, iLength);
 
-    printf("Maximum number is : %d\n",iRet);
-
+    printf("Uodated data from array is : ");
+    for(iCnt = 0; iCnt < iLength; iCnt++)
+    {
+        printf("%d\n",iPtr[iCnt]);
+    }
+    
     // Step 3 : Free the memory
     free(iPtr);
 

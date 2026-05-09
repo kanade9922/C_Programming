@@ -1,28 +1,21 @@
-// Accept N number from user find the largest number
-
 #include<stdio.h>
 #include<stdlib.h>
 
 typedef  int * IPTR;
 
-int Maximum(int Arr[], int iSize)
+void ReverseDisplay(int Arr[], int iSize)
 {
-    int iCnt = 0, iMax = 0;     // Unable to handle negative input
+    int iCnt = 0;
 
-    for(iCnt = 0; iCnt < iSize; iCnt++)
+    for(iCnt = iSize-1; iCnt >= 0; iCnt--)
     {
-        if(Arr[iCnt] > iMax)
-        {
-            iMax = Arr[iCnt];
-        }
+        printf("%d\n",Arr[iCnt]);
     }
-
-    return iMax;
 }
 
 int main()
 {
-    int iLength = 0, iCnt = 0, iRet = 0;
+    int iLength = 0, iCnt = 0;
     IPTR iPtr = NULL;
 
     printf("Enter the number of elements : \n");
@@ -45,10 +38,8 @@ int main()
     }
 
     // Step 2 : Use the memory
-    iRet = Maximum(iPtr, iLength);
-
-    printf("Maximum number is : %d\n",iRet);
-
+    ReverseDisplay(iPtr, iLength);
+    
     // Step 3 : Free the memory
     free(iPtr);
 
